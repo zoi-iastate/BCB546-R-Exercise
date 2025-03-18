@@ -17,14 +17,16 @@ print("Is snp_position.txt a data frame?")
 print(is.data.frame(snps_data))
 
 print("Is fang_et_al_genotypes.txt a data frame?")
-is.data.frame(fang_et_al_genotypes_data)
+print(is.data.frame(fang_et_al_genotypes_data))
 
 
-#Look at column and row size
+#Look at column and row size using the dim function.
+#To look at more information you can also use the view function.
+#i.e. view(snps_data)
 
-print("Looking at rows x columns for snps_data")
-print(dim(snps_data))
+print("Looking at data for snps_data")
+print(snps_data)
 
 
-print("Looking at rows x columns for fang_et_al_genotypes.txt")
-print(dim(fang_et_al_genotypes_data))
+print("Looking at data for fang_et_al_genotypes.txt")
+print(fang_et_al_genotypes_data)
