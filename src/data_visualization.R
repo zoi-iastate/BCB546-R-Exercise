@@ -33,7 +33,8 @@ process_chunk <- function(chunk) {
   # Reshape the data using melt() (for data tables)
   snp_data_melted <- melt(chunk, measure.vars = patterns("genotype"),
                         variable.name = "site", value.name = "genotype")
-  
+
+
   # Summarize the proportions of each genotype category (homozygous, heterozygous, "?")
   genotype_summary <- snp_data_melted[, .(count = .N), by = genotype]
   genotype_summary[, proportion := count / sum(count)]  # Calculate the proportion
@@ -100,6 +101,7 @@ ggsave("Proportion of Homozygous, Heterozygous, and Missing  for Teosinte.png", 
 
 
 
-
+#A different way to visualize SNP locations across the genome
+ggplot(data = snps_fang_maize1) + geom_density(mapping = aes(x=Chromosome), fill = "black")
 
 
