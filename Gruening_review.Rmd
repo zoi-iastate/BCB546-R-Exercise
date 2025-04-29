@@ -1,0 +1,18 @@
+#### Comments
+
+### Overall your code looks great and I can see what you did.
+# For the data inspection I think you can be a little bit more specific and look at the rows, columns or the size of the files. I have put some example codes below. 
+
+```{r}
+# Number of rows and columns and size of the files 
+nrow()
+ncol()
+colnames()
+format(object.size(), units = "auto")
+```
+
+## The data processing part, looked good to me. Maybe you can look into alternatives to for loop.
+
+## I had some error in the visualization part.
+# The Error was: 'Error: object 'process_chunk' not found'
+# Maybe you can look into that. 
